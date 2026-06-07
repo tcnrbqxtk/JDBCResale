@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Настройка вывода в консоль -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Оставляем красивый чистый вывод только самого сообщения -->
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 🤫 ПОЛНОСТЬЮ ОТКЛЮЧАЕМ ЛОГИ ХИКАРИ -->
+    <logger name="com.zaxxer.hikari" level="OFF" />
+
+    <!-- Отключаем возможные системные логи самого драйвера PostgreSQL -->
+    <logger name="org.postgresql" level="OFF" />
+
+    <!-- Основной уровень логов для твоего приложения (выводим только ошибки, если они будут) -->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

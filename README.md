@@ -1,0 +1,1 @@
+docker run -d --name jdbc-examples-postgres -e POSTGRES_DB=education -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5435:5432 postgres:17 -c max_connections=30
