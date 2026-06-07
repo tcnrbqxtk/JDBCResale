@@ -13,7 +13,7 @@ docker run -d \
   postgres:17
 ```
 
-### Параметры подключения (согласно DbConfig):
+### Параметры подключения:
 * **URL:** `jdbc:postgresql://localhost:5432/postgres`
 * **Пользователь:** `postgres`
 * **Пароль:** `postgres`
